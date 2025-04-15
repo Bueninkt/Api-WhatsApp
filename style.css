@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.zap-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.zap-sidebar {
+  width: 28%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.login-area {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.login-area input {
+  flex: 1;
+  padding: 5px;
+}
+
+.login-area button {
+  margin-left: 5px;
+}
+
+#campoBuscaContato {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#listaSugestoes {
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.sugestao-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.sugestao-item:hover {
+  background-color: #e0e0e0;
+}
+
+#painelContatos {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contato-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.contato-item:hover {
+  background-color: #dcdcdc;
+}
+
+.zap-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+#exibicaoMensagens {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.input-mensagem {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.input-mensagem input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-mensagem button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-mensagem button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}

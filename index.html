@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ZapClone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="zap-container">
+        <div class="zap-sidebar">
+            <div class="login-area">
+                <input type="text" id="numeroUsuarioInput" placeholder="Seu número">
+                <button onclick="inicializarConversas()">Entrar</button>
+            </div>
+            <input type="text" id="campoBuscaContato" placeholder="Pesquisar contatos..." oninput="filtrarSugestoes()">
+            <div id="listaSugestoes"></div>
+            <div id="painelContatos"></div>
+        </div>
+
+        <div class="zap-chat">
+            <div id="exibicaoMensagens"></div>
+            <div class="input-mensagem">
+                <input type="text" id="campoMensagem" placeholder="Digite uma mensagem..." disabled>
+                <button id="botaoEnviar" onclick="adicionarMensagem()" disabled>Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
