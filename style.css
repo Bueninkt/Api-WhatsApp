@@ -1,12 +1,8 @@
-/* Modo escuro */
-body.dark-mode {
-  background-color: #0b141a;
-  color: white;
-}
-
-body.light-mode {
-  background-color: #f0f0f0;
-  color: black;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .zap-container {
@@ -16,37 +12,14 @@ body.light-mode {
 }
 
 .zap-sidebar {
-  width: 30%;
+  width: 28%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--borda);
   padding: 10px;
-  background-color: var(--fundo-sidebar);
-  color: var(--texto);
 }
 
-/* Topo com botão de tema */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.top-bar .logo {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.top-bar button {
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: var(--texto);
-}
-
-/* Login */
 .login-area {
   display: flex;
   margin-bottom: 10px;
@@ -54,52 +27,34 @@ body.light-mode {
 
 .login-area input {
   flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  background-color: var(--campo);
-  color: var(--texto);
+  padding: 5px;
 }
 
 .login-area button {
-  margin-left: 8px;
-  padding: 8px 16px;
-  background-color: #00a884;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+  margin-left: 5px;
 }
 
 #campoBuscaContato {
-  padding: 8px;
-  margin-bottom: 6px;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--campo);
-  color: var(--texto);
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 #listaSugestoes {
-  background-color: var(--fundo);
-  border: 1px solid var(--borda);
-  max-height: 160px;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
   overflow-y: auto;
-  border-radius: 6px;
   margin-bottom: 10px;
 }
 
 .sugestao-item {
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
-  border-bottom: 1px solid var(--borda);
-  color: var(--texto);
+  border-bottom: 1px solid #eee;
 }
 
 .sugestao-item:hover {
-  background-color: var(--hover);
+  background-color: #e0e0e0;
 }
 
 #painelContatos {
@@ -108,118 +63,54 @@ body.light-mode {
 }
 
 .contato-item {
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  border-bottom: 1px solid var(--borda);
-  color: var(--texto);
+  border-bottom: 1px solid #ddd;
 }
 
 .contato-item:hover {
-  background-color: var(--hover);
+  background-color: #dcdcdc;
 }
 
-/* Chat */
 .zap-chat {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--fundo-chat);
-  background-image: url('https://web.whatsapp.com/img/bg-chat-tile-dark_cbe70ab45018d2ad3b02.png');
-  background-repeat: repeat;
-}
-
-body.light-mode .zap-chat {
-  background-image: none;
-  background-color: #eaeaea;
+  justify-content: space-between;
+  background-color: #fff;
 }
 
 #exibicaoMensagens {
   flex: 1;
-  padding: 20px;
+  padding: 15px;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
-/* Mensagens */
-#exibicaoMensagens p {
-  max-width: 60%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  line-height: 1.4;
-  word-wrap: break-word;
-}
-
-#exibicaoMensagens p.enviada {
-  align-self: flex-end;
-  background-color: #005c4b;
-  color: white;
-  border-bottom-right-radius: 0;
-}
-
-#exibicaoMensagens p.recebida {
-  align-self: flex-start;
-  background-color: var(--msg-recebida);
-  color: var(--texto);
-  border-bottom-left-radius: 0;
-}
-
-/* Campo envio */
 .input-mensagem {
   display: flex;
+  border-top: 1px solid #ccc;
   padding: 10px;
-  background-color: var(--fundo-sidebar);
-  border-top: 1px solid var(--borda);
+  background-color: #f8f8f8;
 }
 
 .input-mensagem input {
   flex: 1;
-  padding: 12px;
-  border-radius: 20px;
-  border: none;
-  background-color: var(--campo);
-  color: var(--texto);
-  outline: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .input-mensagem button {
   margin-left: 10px;
   padding: 10px 20px;
-  background-color: #00a884;
+  background-color: #25d366;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .input-mensagem button:disabled {
-  background-color: #444;
+  background-color: #999;
   cursor: not-allowed;
-}
-
-/* Variáveis para modo escuro */
-body.dark-mode {
-  --fundo: #111b21;
-  --fundo-sidebar: #202c33;
-  --fundo-chat: #0b141a;
-  --campo: #2a3942;
-  --texto: #e9edef;
-  --borda: #2a3942;
-  --hover: #2a3942;
-  --msg-recebida: #202c33;
-}
-
-/* Variáveis para modo claro */
-body.light-mode {
-  --fundo: #fff;
-  --fundo-sidebar: #f0f2f5;
-  --fundo-chat: #eaeaea;
-  --campo: #ffffff;
-  --texto: #111;
-  --borda: #ccc;
-  --hover: #ddd;
-  --msg-recebida: #fff;
 }
